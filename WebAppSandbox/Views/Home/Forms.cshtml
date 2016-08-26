@@ -1,0 +1,88 @@
+﻿@{
+    ViewBag.Title = "Forms";
+}
+
+<h2>Forms</h2>
+<form id="thisForm">
+    <div id="inputTypes">
+        <div class="col-xs-12"><label for="message">Message:</label>
+            <label for="textArea">textArea:</label>
+            <textarea name="textArea">
+                A multiline text input control. The cols attribute indicates the desired
+                width of the based on the quantity of columns you want. The textarea
+                element has a maxlength attribute that can be set to constrain the quantity of characters the textarea
+                will accept. You can also set a placeholder attribute to provide a
+                small hint to the user until text is entered. The wrap attribute can be set to soft or hard.
+                Setting to soft (the default) does not insert linefeeds in the posted data. Setting to
+                hard inserts linefeeds based on the cols attribute setting.
+            </textarea>
+        </div> <div class="col-xs-12"><label for="select">select:</label>
+            <select name="select">
+
+                <option value="1"> elements, which are the list items.</option>
+                <option value="2"> elements, which are the list items.</option>
+                <option value="3"> elements, which are the list items.</option>
+            </select> A drop-down (select)list
+        </div> <div class="col-xs-12"><label for="button">button:</label>
+            <button name="button" type="button">
+                A clickable button
+            </button>
+        </div> <div class="col-xs-12"><label for="inputbutton">inputbutton:</label>
+            <input type='button' name="inputbutton"> A clickable button.
+        </div> <div class="col-xs-12"><label for="checkbox">checkbox:</label>
+            <input type='checkbox' name="checkbox"> A check box.
+        </div> <div class="col-xs-12"><label for="color">color:</label>
+            <input type='color' name="color"> color
+        </div> <div class="col-xs-12"><label for="date">date:</label>
+            <input type='date' name="date">date
+        </div> <div class="col-xs-12"><label for="datetime">datetime:</label>
+            <input type='datetime' name="datetime">datetime
+        </div> <div class="col-xs-12"><label for="datetimelocal">datetime-local:</label>
+            <input type='datetime-local' name="datetimelocal"> datetime-local
+        </div> <div class="col-xs-12">
+            <label for="email">Email Address:</label>
+            <input type='email' name="email"> email
+        </div> <div class="col-xs-12"><label for="file">file:</label>
+            <input type='file' name="file"> file
+        </div> <div class="col-xs-12"><label for="hidden">hidden:</label>
+            hidden=> <input type='hidden' name="hidden"> <=hidden
+        </div> <div class="col-xs-12"><label for="image">image:</label>
+            <input type='image' name="image"> image
+        </div> <div class="col-xs-12"><label for="month">month:</label>
+            <input type='month' name="month"> month
+        </div> <div class="col-xs-12"><label for="number">number:</label>
+            <input type='number' name="number" min="18" max="99" value="30"
+                   required="required"> number
+        </div> <div class="col-xs-12"><label for="password">password:</label>
+            <input type='password' name="password" required="required"> password
+        </div> <div class="col-xs-12"><label for="radio">radio:</label>
+            <input type='radio' name="radio"> radio
+        </div> <div class="col-xs-12"><label for="range">range:</label>
+            <input type='range' name="range">range
+        </div> <div class="col-xs-12"><label for="reset">reset:</label>
+            <input type='reset' name="reset"> A button that resets
+        </div> <div class="col-xs-12"><label for="search">search:</label>
+            <input type='search' name="search"> A text field for entering a search string.
+        </div> <div class="col-xs-12"><label for="subit">subit:</label>
+            <input type='submit' name="subit"> A submit button.
+        </div> <div class="col-xs-12"><label for="telephone">telephone:</label>
+            <input type='tel' name="telephone" required="required" placeholder="required"> A telephone number field.
+        </div> <div class="col-xs-12"><label for="text">text:</label>
+            <input type='text' name="text"> text
+        </div> <div class="col-xs-12"><label for="time">time:</label>
+            <input type='time' name="time"> time
+        </div> <div class="col-xs-12"><label for="url">url:</label>
+            <input type='url' name="url"
+                   title="http://contoso.com or https://contoso.com"
+                   required="required" pattern="https?://.+"> url
+        </div> <div class="col-xs-12"><label for="week">week:</label>
+            <input type='week' name="week"> week
+        </div>
+    </div>
+</form>
+
+<script>
+    $(document).ready(function () {
+        new App.Home.FormsController();
+    });
+</script>

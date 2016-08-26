@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "WebSockets";
+}
+
+<h2>WebSockets</h2>
+<h3>lesson example</h3>
+Enter Message: <input type="text" id="txtMessage" />
+<button type="button" id="btnSend">Send</button><br />
+<div id="divOutput"></div>
+<h3>
+    exercise client
+</h3>
+<div id="ex10example">
+    <div class="userContainer">
+        <h2>Users</h2>
+        <div id="users"></div>
+    </div>
+    <div class="conversationContainer">
+        <input id="data" />
+        <input type="button" id="datasend" value="send" />
+        <div id="conversation"></div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+
+        new App.Home.WebSocketController();
+
+    });
+</script>

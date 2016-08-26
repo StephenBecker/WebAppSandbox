@@ -1,0 +1,46 @@
+﻿body {
+}
+
+.effect {
+    background: grey;
+    height: 20px;
+    width: 60px;
+}
+
+.ui-effects-transfer {
+    border: 2px dotted gray;
+}
+
+.screensize {
+    display: none;
+}
+
+@media screen and (max-width:480px) {
+    span.less480 {
+        display: inline;
+    }
+}
+
+@media screen and (min-width:481px)and (max-width:599px) {
+    span.d480 {
+        display: inline;
+    }
+}
+
+@media screen and (min-width:600px)and (max-width:768px) {
+    span.d600 {
+        display: inline;
+    }
+}
+
+@media screen and (min-width:769px)and (max-width:1000px) {
+    span.d768 {
+        display: inline;
+    }
+}
+
+@media screen and (min-width:1001px) {
+    span.d1000 {
+        display: inline;
+    }
+}

@@ -1,0 +1,47 @@
+﻿@model IPagedList<WebAppSandbox.Web.ViewModels.TestTwo.ResturantViewModel>
+
+<div class="pagedList" data-target="#restaurantList">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), PagedListRenderOptions.Classic)
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.First().City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().CountOfReviews)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Country)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountOfReviews)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Reviews", "Index", "Reviews", new { id = item.Id }, null) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+</table>

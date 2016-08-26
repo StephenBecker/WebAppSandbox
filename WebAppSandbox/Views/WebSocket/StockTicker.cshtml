@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "StockTicker";
+}
+<link href="~/Content/CSS/StockTicker/StockTicker.css" rel="stylesheet" />
+<h2>StockTicker</h2>
+
+<div class="col"><ul id="log"></ul></div>
+<div class="col"><ul id="stocks"></ul></div>
+
+<script>
+    //getting lazy here
+    $(document).ready(function () {
+        function log(message) {
+            $('#log').append('<li>' + message + '</li>');
+        }
+
+        var stocks = $('#stocks');
+
+        function addStock(stock) {
+            var className = (stock.IsUp) ? 'up' : 'down';
+
+            stocks.prepend('' + '<li class="' + className + '">' + '<span class="symbol">' + stock.Symbol.toUpperCase() + '</span>' +
+                '<span class="value">$' + stock.Value + '</span>' +
+                'span class="percentChange">' + stock.PercentChange + '%</span>' + '</li>');
+        }
+
+        log('Attempting to connect to socket server');
+        var webSocket = window.WebSocket || window.MozWebSocket;
+        var ws = new webSocket("ws://localhost:8182");
+        ws.onopen = function (e) {
+            log('Connection opened');
+        }
+        ws.onclose = function (e) {
+            log('Conncetion close');
+        }
+        ws.onmessage = function (e) {
+            var stock = JSON.parse(e.data);
+            addStock(stock);
+        }
+
+    });
+</script>

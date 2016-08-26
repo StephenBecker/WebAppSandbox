@@ -1,0 +1,69 @@
+﻿body {
+}
+
+div + h1 {
+    background-color: yellow;
+}
+
+#navLinkCss > a[href]:hover:after {
+    content: " (" attr(href) ")";
+    background-color: yellow;
+}
+
+a[href="https://microsoft.com"]:hover:after {
+    color: red;
+}
+
+a[href*='contoso.com']:hover {
+    background-color: green;
+}
+
+a[href^='https']::before {
+    content: 'Secured: ';
+}
+
+#cssStuffTable table {
+    border: medium solid #000000;
+}
+
+#cssStuffTable thead th {
+    background-color: #BDEAFF;
+    width: 100px;
+}
+
+#cssStuffTable tbody th {
+    background-color: #FFFF99;
+}
+
+#cssStuffTable tfoot th {
+    background-color: #C2FE9A;
+}
+
+    #cssStuffTable tfoot th:first-of-type {
+        text-align: right;
+    }
+
+    #cssStuffTable tfoot th:last-of-type {
+        text-align: right;
+    }
+
+#cssStuffTable td {
+    text-align: center;
+    border: thin solid #000000;
+}
+
+td:last-of-type {
+    text-align: right;
+}
+
+th {
+    border: thin solid #000000;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: normal;
+}

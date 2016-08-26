@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>@ViewBag.Title</title>
+
+    @Scripts.Render("~/bundles/script/lib")
+    @Styles.Render("~/bundles/css/lib")
+    @Scripts.Render("~/bundles/script/app")
+    @Styles.Render("~/bundles/css/app")
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("MCSD Sandbox", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">70-480 Exam Mats<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+
+                            <li>@Html.ActionLink("Iframes", "Iframes", "Home")</li>
+                            <li>@Html.ActionLink("Calc", "Calculator", "Home")</li>
+                            <li>@Html.ActionLink("Css", "CssStuff", "Home")</li>
+                            <li>@Html.ActionLink("JQuery", "JQuery", "Home")</li>
+                            <li>@Html.ActionLink("Forms", "Forms", "Home")</li>
+                            <li>@Html.ActionLink("Async", "AsyncOps", "Home")</li>
+                            <li>@Html.ActionLink("WebSockets", "index", "websocket")</li>
+                            <li>@Html.ActionLink("MediaPage", "VideoAudioMediaPage", "Home")</li>
+                            <li>@Html.ActionLink("Canvas", "Drawing", "Home")</li>
+                            <li>@Html.ActionLink("D&D", "DragAndDrop", "Home")</li>
+                            <li>@Html.ActionLink("Loc", "Index", "Location")</li>
+                            <li>@Html.ActionLink("data", "Index", "Data")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">70-486 Exam Mats<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("index", "Index", "testtwo")</li>
+                            <li>@Html.ActionLink("JQuery Anamations", "JQAnim", "testtwo")</li>
+                            <li>@Html.ActionLink("resturants", "Index", "resturants")</li>
+                            <li>@Html.ActionLink("htmlHelpers", "Index", "HtmlHelperExamples")</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+
+        <footer>
+            <hr />
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

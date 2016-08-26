@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>WebSocket.net</h2>
+
+<div id="container">
+    <h1>Sending messages to .net console app</h1>
+    <input type="text" id="messageBoxWebsocket" placeholder="type message here" />
+    <ul id="log"></ul>
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        new App.WebSocket.WebSocketController(App.Services.WebSocketServices("ws://localhost:8181"));
+
+    });
+</script>

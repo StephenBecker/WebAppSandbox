@@ -1,0 +1,127 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    &lt;h1&gt;
+    The h1 child before the first div
+    &lt;/h1&gt;<br>
+    &lt;div&gt;
+    some child content<br>
+    -->   &lt;h1&gt;
+    This is the first h1 child
+    &lt;/h1&gt;<br>
+    -->  &lt;div>another div here&lt;/div&gt;<br>
+    -->   some text after the div<br>
+    -->  &lt;h1&gt;
+    This is the second h1 child
+    &lt;/h1&gt;<br>
+    -->    &lt;h1&gt;
+    This is the third h1 child
+    &lt;/h1&gt;<br>
+    &lt;/div&gt;<br>
+    some following content
+    &lt;span>here is a span&lt;/span&gt;<br>
+    &lt;h1&gt;
+    This the first h1 that follows the paragraph
+    &lt;/h1&gt;<br>
+    &lt;h1&gt;
+    This the second h1 that follows the paragraph
+    &lt;/h1&gt;<br>
+    &lt;h1&gt;
+    This the third h1 that follows the paragraph
+    &lt;/h1&gt;<br>
+</div>
+
+<h1>
+    The h1 child before the first div
+</h1>
+<div>
+    some child content
+    <header>
+        <hgroup>
+            <h1>
+                This is the first h1 child
+            </h1>
+            <h3>subheader h3</h3>
+        </hgroup>
+    </header>
+    <div>another div here</div>
+    some text after the div
+    <h1>
+        This is the second h1 child
+    </h1>
+    <h1>
+        This is the third h1 child
+    </h1>
+</div>
+some following content
+<span>here is a span</span>
+<h1>
+    This the first h1 that follows the paragraph
+</h1>
+<h1>
+    This the second h1 that follows the paragraph
+</h1>
+<h1>
+    This the third h1 that follows the paragraph
+</h1>
+<div id="navLinkCss">
+    <a href='http://contoso.com'>Link 1a</a><br />
+    <a href='http://www.contoso.com/default.html'>Link 1b</a><br />
+    <a>Link 2</a><br />
+    <a href='https://microsoft.com'>Link 3</a><br />
+</div>
+<table id="cssStuffTable">
+    <thead>
+        <tr>
+            <th>Vehicle #</th>
+            <th>Category</th>
+            <th>Year</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody id="antiqueCars">
+        <tr>
+            <th>1</th>
+            <td rowspan="2">Antique</td>
+            <td>1957</td>
+            <td>Ford</td>
+            <td>Thunderbird</td>
+            <td>14,000</td>
+        </tr>
+        <tr>
+            <th>2</th>
+            <td>1958</td>
+            <td>Chevrolet</td>
+            <td>Impala</td>
+            <td>3,000</td>
+        </tr>
+    </tbody>
+    <tbody id="nonAntiqueCars">
+        <tr>
+            <th>3</th>
+            <td rowspan="2">Non-Antique</td>
+
+            <td>2012</td>
+            <td>BMW</td>
+            <td>Z4</td>
+            <td>40,000</td>
+        </tr>
+        <tr>
+            <th>4</th>
+            <td>2003</td>
+            <td>Mazda</td>
+            <td>Miata</td>
+            <td>5,000</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th colspan="5">Total:</th>
+            <th>62,000</th>
+        </tr>
+    </tfoot>
+</table>

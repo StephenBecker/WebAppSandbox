@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "AsyncOps";
+}
+
+<h2>AsyncOps</h2>
+
+<div id="cover">
+</div>
+<div id="messageBox">
+    <div id="messageContent">
+        <div id="message"> </div>
+        <br />
+        <button type="button" id="messageOk">OK</button>
+    </div>
+</div>
+<button type="button" id="btnShowMessage">Show Message</button>
+
+<script>
+    $(document).ready(function () {
+       new App.Home.AsyncOpsController();
+    })
+</script>

@@ -1,0 +1,22 @@
+﻿@model ICollection<WebAppSandbox.Web.ViewModels.TestTwo.ResturantViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<form method="get">
+    <input  type="search" name="search" />
+    <input type="submit" value="Search by Name" />
+</form>
+
+<h2>Index</h2>
+@foreach (var item in Model)
+{
+    <div>
+        <h4>@item.Name</h4>
+        <div>@item.Country</div>
+        <div>@item.City</div>
+        <div>Review count : @item.CountOfReviews</div>
+        <hr />
+    </div>
+}

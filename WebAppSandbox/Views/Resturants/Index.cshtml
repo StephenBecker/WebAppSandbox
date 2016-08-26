@@ -1,0 +1,54 @@
+﻿@model IPagedList<WebAppSandbox.Web.ViewModels.TestTwo.ResturantViewModel>
+
+@{
+    ViewBag.Title = "Resturants";
+
+    var local = DateTime.Now.ToLongTimeString();
+}
+<link href="~/Content/Resturants/Resturant.css" rel="stylesheet" />
+<div class="content-wrapper col-xs-12">
+    <div class="col-xs-12">
+        <p class="site-title">
+            <a href="@Url.Action("Index", "Resturants")">
+                <img src="~/Content/Resturants/OdeToFood.png" />
+            </a>
+        </p>
+    </div>
+    <div class="col-xs-12">
+        <section id="login" class="col-xs-12">
+            @Html.Partial("_LoginPartial")
+        </section>
+    </div><div class="col-xs-12">
+        <nav>
+            <ul id="menu">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                <li>@Html.ActionLink("Reviews", "Index", "Reviews")</li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<h2>Resturants</h2>
+<h4>@local</h4>
+
+@using (Ajax.BeginForm(
+                                                                                                                            new AjaxOptions
+                                                                                                                            {
+                                                                                                                                HttpMethod = "get",
+                                                                                                                                InsertionMode = InsertionMode.Replace,
+                                                                                                                                UpdateTargetId = "restaurantList"
+                                                                                                                            }
+                                                                                                                        ))
+{
+
+    <input type="search" name="search" />
+    <input type="submit" value="Search by Name" />
+
+}
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div id="restaurantList">
+    @Html.Partial("Partials/ResturantList", Model)
+</div>

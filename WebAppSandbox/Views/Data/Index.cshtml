@@ -1,0 +1,118 @@
+﻿@{
+    ViewBag.Title = "Data";
+}
+<script src="~/Scripts/Libraries/modernizr-2.8.3.js"></script>
+
+<li>@Html.ActionLink("Go To FileAPIPAge", "FileSystemAPI", "Data")</li>
+<h2>Data</h2>
+<h2> cookies </h2>
+<p>
+
+    <ul>
+        <li>limited to about 4 KB of data, which is not large,</li>
+        <li>Can create max between 30 and 50 cookies per site (browser dependent)</li>
+        <li>Overhead Every cookie is sent with each HTTP request/response made.</li>
+    </ul>
+</p>
+<div id="cookieContents"></div>
+<label class="" for="cookieName">cookie name:</label>
+<input type="text" id="cookieName" name="name" /><br />
+<label for="cookieValue">cookie value:</label>
+<input type="text" id="cookieValue" name="value" /><br />
+<label for="cookieexpirationDays">cookie expiration days:</label>
+<input type="number" id="cookieexpirationDays" name="expirationDays" /><br />
+
+<input type="button" value="setCookie" id="btn-setCookie" />
+<br />
+<label for="btn-getCookie">
+    <input type="text" id="searchName" />
+    <input type="button" value="getCookie" id="btn-getCookie" />
+</label>
+<div id="cookieVal"> </div>
+
+<label for="btn-cookieCutter">
+    <input type="button" class="btn btn-danger" value="cookie cutter (kill)" id="btn-cookieCutter" />
+</label>
+<br />
+<label for="allCookies">All cookies</label>
+<textarea id="allCookies"></textarea>
+
+<h2>Local Storage</h2>
+<p>
+
+    <ul>
+        <li>Modern browsers support a minimum of 5 MB of data</li>
+        <li>
+            wrapping call to set item with a try catch can prevent application crash when exeeding the limit
+        </li>
+        <li>use JSON.stringify(object) to store an object, JSON.parse(localStorage.getItem('key/name')) to retrieve it </li>
+        <li>unlike sessionStorage (also a Storage object), local storage will persist when the browser is closed</li>
+        <li> session storage is limited to the tab in which it was instaciated</li>
+        <li>Reads/writes to web storage can be performed only synchronously.</li>
+    </ul>
+</p>
+<label> Web Storage available : <span id="localStorageAvailable"></span></label><br />
+
+<label class="" for="storageName">
+    local storage name:
+    <input type="text" id="storageName" name="name" />
+</label><br />
+<label for="storageValue">
+    local storage value:
+    <input type="text" id="storageValue" name="value" />
+</label><br />
+<label for="btn-storeLocal">
+    <input type="button" class="" value="store local" id="btn-storeLocal" />
+</label>
+
+<br />
+<label class="" for="storageEventName">
+    local storageEvent name:
+    <input type="text" id="storageEventName" name="name" />
+</label>
+<label for="btn-storeEvent">
+    <input type="button" class="" value="store event Listener" id="btn-storeEvent" />
+</label><br />
+<div>
+    <ul id="storageEvents"></ul>
+</div>
+<br />
+<div id="webSQLExample">
+    <h4>Web SQL</h4>
+    <h5>created table author{firstName, lastName, dateCreated}</h5>
+    <p>example query "SELECT * FROM authors"</p>
+
+    <textarea id="sqlExecuteInput"></textarea>
+    <input type="button" class="" value="execute sql" id="btn-sqlExecute" />
+    <textarea id="sqlResult"></textarea>
+</div>
+
+<section id="webWorkerSection">
+    <h1>web Worker</h1>
+    <label for="countInput">count</label><input id="countInput" type="number" name="countInput" value="0" />
+    <input type="button" value="execute fibo calc" onclick="getFibValues()" />
+    <textarea id="fiboresult"></textarea>
+
+    <script>
+        if (Modernizr.webworkers) {
+            var worker = new Worker('/Scripts/App/Workers/Worker_fibonacci.js');
+            worker.onmessage = function (e) {
+                $('#fiboresult').val(e.data);
+            }
+            worker.onerror = function (e) {
+                $('#fiboresult').val('Error: ' + e.data);
+            }
+            getFibValues = function () {
+                worker.postMessage($('#countInput').val());
+            }
+        } else {
+            $("#webWorkerSection").html("this browser dose not support web workers");
+        }
+    </script>
+</section>
+
+<script>
+    $(document).ready(function () {
+        new App.Data.DataController(App.Services.CookieServices());
+    });
+</script>

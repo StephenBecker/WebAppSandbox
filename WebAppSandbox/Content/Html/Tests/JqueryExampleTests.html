@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width" />
+    <title>Jquery example tests</title>
+
+    <script src="../../../Scripts/Libraries/jquery-2.2.4.js"></script>
+    <link href="../../CSS/Libraries/qunit.css" rel="stylesheet" />
+    <script src="../../../Scripts/Libraries/qunit.js"></script>
+
+    <script src="../../../Scripts/App/App.js"></script>
+    <script src="../../../Scripts/App/Home/JQueryController.js"></script>
+    <script src="../../../Scripts/Tests/Home/JqueryExampleTests.js"></script>
+</head>
+<body>
+
+    <script>
+        //init namespaced function
+        var _sut = App.Home.JQueryController();
+    </script>
+
+    <div>
+        <h1 id="qunit-header">Jquery example tests</h1>
+        <h2 id="qunit-banner"></h2>
+        <div id="qunit-testrunner-toolbar"></div>
+        <h2 id="qunit-userAgent"></h2>
+        <ol id="qunit-tests"></ol>
+        <div id="qunit-fixture">
+            test markup, will be hidden
+            <input id="txtInput" type="text" /><br />
+            <input id="txtResult" type="text" /><br />
+        </div>
+    </div>
+</body>
+</html>

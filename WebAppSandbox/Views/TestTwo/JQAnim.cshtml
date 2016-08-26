@@ -1,0 +1,91 @@
+﻿@{
+    ViewBag.Title = "JQAnim";
+}
+<link href="~/Content/CSS/TestTwo/HtmlHlepers/mediaqueries.css" rel="stylesheet" />
+<h2>JQAnim</h2>
+
+<div>
+    Screen:
+    <span class="less480 screensize ">&lt; 480</span>
+    <span class="d480 screensize"> 480 - 600</span>
+    <span class="d600 screensize">600 - 768 </span>
+    <span class="d768 screensize"> 768 - 1000 </span>
+    <span class="d1000 screensize"> &gt; 1000</span>
+</div>
+
+<div class="col-xs-12">
+    <div><h4 class="effect" data-effect="blind">blind</h4><p>Hides the UI element in a “window blind” animation</p></div>
+</div>
+<div class="col-xs-12">
+    <div><h4 class="effect" data-effect="bounce">bounce</h4><p>Bounces the UI element in the same place</p></div>
+</div>
+<div class="col-xs-12">
+    <div><h4 class="effect" data-effect="clip">clip</h4><p>Folds and hides the UI element in the center of the window</p></div>
+</div>
+<div class="col-xs-12">
+    <div><h4 class="effect" data-effect="drop">drop</h4><p>Drops the element into or out of view</p></div>
+</div>
+<div class="col-xs-12">
+    <div><h4 class="effect" data-effect="explode">explode</h4><p>Splits the UI element into small pieces and scatters the pieces</p></div>
+</div>
+<div class="col-xs-12">
+    <div><h4 class="effect" data-effect="fade">fade</h4><p>Fades out the UI element</p></div>
+</div>
+<div class="col-xs-12">
+    <div><h4 class="effect" data-effect="fold">fold</h4><p>Folds the UI element into its own upper-left corner</p></div>
+</div>
+<div class="col-xs-12">
+    <div><h4 class="effect" data-effect="highlight">highlight</h4><p> Highlights the UI element</p></div>
+</div>
+<div class="col-xs-12">
+    <div><h4 class="effect" data-effect="puff">puff</h4><p>Fades out the element as it grows larger</p></div>
+</div>
+<div class="col-xs-12">
+    <div><h4 class="effect" data-effect="pulsate">pulsate</h4><p>Blinks the UI element</p></div>
+</div>
+<div class="col-xs-12">
+    <div><h4 class="effect" data-effect="scale">scale</h4><p>Fades out the element as it shrinks</p></div>
+</div>
+<div class="col-xs-12">
+    <div><h4 class="effect" data-effect="shake">shake</h4><p>Moves the UI element from side to side</p></div>
+</div>
+<div class="col-xs-12">
+    <div><h4 class="effect" data-effect="size">size</h4><p>Slowly shrinks the UI element</p></div>
+</div>
+<div class="col-xs-12">
+    <div><h4 class="effect" data-effect="slide">slide</h4><p>Slides the element out of the viewport in the designated direction</p></div>
+</div>
+<div class="col-xs-12">
+    <div><h4 class="effect" data-effect="transfer">transfer</h4><p>creates an illusion of an element disappearing into a different element</p></div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(".effect").hover(function () {
+            var thiselement = $(this);
+            var effect = $(this).data("effect");
+            // Most effect types need no options passed by default
+            var options = {};
+            // some effects have required parameters
+            if (effect === "scale") {
+                options = { percent: 50 };
+            } else if (effect === "transfer") {
+                options = { to: ".navbar-header", className: "ui-effects-transfer" };
+            } else if (effect === "size") {
+                options = { to: { width: 200, height: 60 } };
+            }
+            function callback() {
+                setTimeout(function () {
+                    $("#effect").removeAttr("style").hide().fadeIn();
+                }, 1000);
+            };
+
+            $(this).effect(effect, options, 500, function () {
+                setTimeout(function () {
+                    thiselement.removeAttr("style").hide().fadeIn();
+                }, 1000)
+            });
+        })
+
+    });
+</script>

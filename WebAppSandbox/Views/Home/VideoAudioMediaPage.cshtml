@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "VideoAudioMediaPage";
+}
+
+<h2>VideoPage</h2>
+
+<video id="firstVideo" width="320" height="240" controls="controls" poster="~/Content/Images/robotzombie.jpg">
+    <source src="~/Content/Video/Video.mp4" />
+    You need a browser that supports HTML5!
+</video>
+
+<audio id="audioId" controls>
+    <source src="~/Content/Audio/audio.mp3" type='audio/mpeg; codecs="mp3"' />
+    You need a browser that supports HTML5!
+</audio>
+
+<video id="media" height="480" value="1">
+    <source src="~/Content/Video/Video.mp4" />
+</video>
+<br />
+<button type="button" id="play">Play</button>
+
+<script>
+    $(document).ready(function () {
+        new App.Home.VideoPageController();
+
+    });
+</script>
