@@ -1,6 +1,4 @@
-﻿/// <reference path="../../_references.js" />
-
-module('QUnit Test Suite', { setup: function () { _sut.init();; } });
+﻿module('QUnit Test Suite', { setup: function () { _sut.init();; } });
 test("Initialize Test", function () {
     expect(2);
     var expected = '0';

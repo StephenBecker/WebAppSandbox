@@ -1,0 +1,41 @@
+﻿{
+  "Framework": "qunit|jasmine|mocha",
+
+  "FrameworkVersion": "",
+
+  "TestFileTimeout": "<Timeout in milliseconds>",
+
+  "TestHarnessLocationMode": "TestFileAdjacent|SettingsFileAdjacent|Custom",
+
+  "TestHarnessDirectory": "<Path to a folder>",
+
+  "TestHarnessReferenceMode": "Normal|AMD",
+
+  "RootReferencePathMode": "DriveRoot|SettingsFileDirectory",
+
+  "CodeCoverageIncludes": [],
+
+  "CodeCoverageExcludes": [],
+
+  "EnableCodeCoverage": "true|false|null",
+
+  "References": [],
+
+  "Tests": [ "/Tests" ],
+
+  "CoffeeScriptBareMode": "true|false",
+
+  "CustomTestHarnessPath": "<Path to custom test harness file>",
+
+  "Compile": "<A",
+  "compile" "configuration",
+  "object>",
+
+  "TestPattern": "<Regex test name pattern>",
+
+  "AMDBasePath": "<Path to same location that your Require.js config baseurl points to>",
+
+  "TypeScriptCodeGenTarget": "ES3|ES5",
+
+  "TypeScriptModuleKind": "CommonJS|AMD"
+}

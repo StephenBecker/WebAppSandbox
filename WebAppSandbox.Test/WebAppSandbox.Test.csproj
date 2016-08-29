@@ -203,23 +203,6 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <None Include="Scripts\jquery-3.1.0.intellisense.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\jquery-3.1.0.js" />
-    <Content Include="Scripts\jquery-3.1.0.min.js" />
-    <Content Include="Scripts\jquery-3.1.0.slim.js" />
-    <Content Include="Scripts\jquery-3.1.0.slim.min.js" />
-    <Content Include="Scripts\jquery-3.1.0.slim.min.map" />
-    <Content Include="Scripts\jquery-3.1.0.min.map" />
-    <None Include="Scripts\Libraries\jquery-2.2.4.intellisense.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\Libraries\jquery-2.2.4.js" />
-    <Content Include="Scripts\Libraries\jquery-2.2.4.min.js" />
-    <Content Include="Scripts\Libraries\ai.0.22.9-build00167.js" />
-    <Content Include="Scripts\Libraries\ai.0.22.9-build00167.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -227,21 +210,36 @@
     <Content Include="Content\Libraries\bootstrap.css.map" />
     <Content Include="Content\Libraries\bootstrap-theme.min.css.map" />
     <Content Include="Content\Libraries\bootstrap-theme.css.map" />
-    <Content Include="Scripts\Libraries\jquery-2.2.4.min.map" />
+    <Content Include="Scripts\Libraries\ai.0.22.9-build00167.js" />
+    <Content Include="Scripts\Libraries\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\Libraries\bootstrap.js" />
     <Content Include="Scripts\Libraries\bootstrap.min.js" />
+    <Content Include="Scripts\Chutzpah.json" />
+    <None Include="Scripts\Libraries\jquery-3.1.0.intellisense.js" />
+    <Content Include="Scripts\Libraries\jquery-3.1.0.js" />
+    <Content Include="Scripts\Libraries\jquery-3.1.0.min.js" />
+    <Content Include="Scripts\Libraries\jquery-3.1.0.slim.js" />
+    <Content Include="Scripts\Libraries\jquery-3.1.0.slim.min.js" />
+    <Content Include="Scripts\Libraries\jquery-ui.js" />
+    <Content Include="Scripts\Libraries\jquery-ui.min.js" />
+    <Content Include="Scripts\Libraries\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\Libraries\jquery.unobtrusive-ajax.min.js" />
     <None Include="Scripts\Libraries\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\Libraries\jquery.validate.js" />
     <Content Include="Scripts\Libraries\jquery.validate.min.js" />
     <Content Include="Scripts\Libraries\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\Libraries\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\Libraries\modernizr-2.8.3.js" />
+    <Content Include="Scripts\Libraries\qunit.js" />
     <Content Include="Scripts\Libraries\respond.js" />
     <Content Include="Scripts\Libraries\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\Libraries\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\Libraries\respond.min.js" />
-    <Content Include="Scripts\Libraries\_references.js" />
-    <Content Include="Scripts\Libraries\qunit.js" />
+    <Content Include="Scripts\Libraries\SocketIO\socket.io.js" />
+    <Content Include="Scripts\Libraries\SocketIO\socket.io.min.js" />
+    <Content Include="Scripts\Libraries\SocketIO\WebSocketMain.swf" />
+    <Content Include="Scripts\Libraries\SocketIO\WebSocketMainInsecure.swf" />
+    <None Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -253,12 +251,13 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Test\TestView.cshtml" />
-    <Content Include="Views\Test\CalculatorTests.cshtml" />
+    <Content Include="Scripts\Libraries\jquery-3.1.0.min.map" />
+    <Content Include="Scripts\Libraries\jquery-3.1.0.slim.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Test\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
