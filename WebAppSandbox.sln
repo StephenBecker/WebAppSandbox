@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppSandbox.Test", "WebAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSocketServer", "WebSocketServer\WebSocketServer.csproj", "{012655F1-2269-464F-9814-D808857A0D89}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC5KatanaExample.Web", "MVC5KatanaExample.Web\MVC5KatanaExample.Web.csproj", "{A1DAB8C9-613F-49E0-8F98-FECFDF62B2F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KatanaConsoleApp", "KatanaConsoleApp\KatanaConsoleApp.csproj", "{2575C787-6D07-4CB5-AF88-A4382BF61F66}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{012655F1-2269-464F-9814-D808857A0D89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{012655F1-2269-464F-9814-D808857A0D89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{012655F1-2269-464F-9814-D808857A0D89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1DAB8C9-613F-49E0-8F98-FECFDF62B2F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1DAB8C9-613F-49E0-8F98-FECFDF62B2F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1DAB8C9-613F-49E0-8F98-FECFDF62B2F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1DAB8C9-613F-49E0-8F98-FECFDF62B2F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2575C787-6D07-4CB5-AF88-A4382BF61F66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2575C787-6D07-4CB5-AF88-A4382BF61F66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2575C787-6D07-4CB5-AF88-A4382BF61F66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2575C787-6D07-4CB5-AF88-A4382BF61F66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
